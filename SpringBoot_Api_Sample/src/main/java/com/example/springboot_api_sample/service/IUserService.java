@@ -12,6 +12,6 @@ public interface IUserService {
     List<UserDto> getAll();
     List<UserPojo> getAllPojo();
     Optional<UserDto>  findById(int id);
-//    @Query("select UserPojo from UserPojo where name like %?1%")
+    Optional<UserPojo>  findByIdPojo(int id);
    List<UserPojo>  findByNameUser(String name);
 }

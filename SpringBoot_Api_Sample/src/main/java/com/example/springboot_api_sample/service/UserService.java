@@ -53,6 +53,17 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public Optional<UserPojo> findByIdPojo(int id) {
+        Optional<UserPojo> optional =  Optional.empty();
+        optional = iUserRepository.findById(id);
+        if (optional.isPresent()) {
+            return optional;
+        }else
+            return  Optional.empty();
+
+    }
+
+    @Override
     public List<UserPojo>  findByNameUser(String name) {
         List<UserPojo> list =iUserRepository.findByUserpojoName(name);
 
