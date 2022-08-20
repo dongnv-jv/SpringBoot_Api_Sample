@@ -1,8 +1,10 @@
-package com.example.springboot_api_sample.exceptionhandle;
+package com.example.springboot_api_sample.responseobject;
 
+import com.example.springboot_api_sample.exceptionhandle.ApiSubError;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.http.HttpStatus;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class ApiError {
     private List<ApiSubError> subErrors;
 
     private ApiError() {
-        timestamp = LocalDateTime.now();
+      this.timestamp=  LocalDateTime.now();
     }
 
     ApiError(HttpStatus status) {
@@ -36,4 +38,6 @@ public class ApiError {
         this.message = message;
         this.debugMessage = ex.getLocalizedMessage();
     }
+
+
 }

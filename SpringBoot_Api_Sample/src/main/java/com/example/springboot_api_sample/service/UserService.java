@@ -3,13 +3,10 @@ package com.example.springboot_api_sample.service;
 import com.example.springboot_api_sample.dto.UserDto;
 import com.example.springboot_api_sample.entity.UserPojo;
 import com.example.springboot_api_sample.repository.IUserRepository;
-import com.example.springboot_api_sample.responseobject.ResponseObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
